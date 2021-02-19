@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 15px 30px;
+        font-size: 17px;
+        padding: 8px;
+    }
+    .container{
+        background-color: #f2f2f2;
+        padding: 5px 20px 15px 20px;
+        border: 1px solid lightgray;
+        border-radius: 4px;
+    }
+    input[type="text"],
+    input[type="date"],
+    input[type="password"],
+    input[type="number"],
+    input[type="email"],
+    select,textarea{
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 10px;
+    }
+    fieldset{
+        background-color: #fff;
+        border: 1px solid #ccc;
+
+    }
+    h1{
+        text-align: center;
+    }
+    input[type=submit]{
+        background-color: #4daea1;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+    }
+    input[type="submit"]:hover{
+        background-color: #4caf84;
+    }
+    .maz{
+        color: red;
+    }
+</style>
+<body>
+    <div class="container">
+        <form action="mailto:santoshkumarmajhee3001@gmail.com" method="POST">
+            <h1>Payment Form</h1>
+        <hr>
+        <h2>User Information</h2>
+        <p><label for="" class="maz">*</label>All marked fields are mandatory.</p>
+        <p>Name: <label for="" class="maz">*</label><input type="text" name="name" id="fullname" placeholder="Enter your name" required></p>
+        <fieldset>
+            <legend>Gender</legend>
+            <p>Male <input type="radio" name="Male" id="gender"> Female <input type="radio" name="female" id="gender"></p>
+        </fieldset><br>
+        <label for="">Address:</label><br>
+        <textarea name="Address" id="" cols="50" rows="6" placeholder="Enter your address"></textarea>
+        <p>Email: <input type="email" name="email" id="" placeholder="xyz@gmail.com"></p>
+        <p>Pincode: <input type="number" name="pincode" id="" placeholder="123456" ></p>
+        <h2>Payment Information</h2>
+        <label for="cardtype">Card Type:</label>
+        <select name="cardtype" id="cardtype">
+            <option value="">~Select card type~</option>
+            <option value="visa">Visa</option>
+            <option value="mastercard">MasterCard</option>
+        </select>
+        <p>Card Number: <label for="" class="maz">*</label> <input type="number" maxlength="16" name="cardno." id="" placeholder="1111-2222-3333-4444" required></p>
+        <p>Expiration Date <input type="date" name="dateexp" id=""></p>
+        <p>CVV <input type="password" name="cvv" id="" placeholder="123"></p>
+        <p><input type="submit" value="Pay Now"></p>
+        </form>
+    </div>
+</body>
+</html>
